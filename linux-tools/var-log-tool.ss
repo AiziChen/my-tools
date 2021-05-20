@@ -8,6 +8,7 @@
       (system "find /var/log -type f")]
     [(equal? (cadr args) "delete-all-logs")
       (system "find /var/log -type f -delete")
-      (displayln "DELETE ALL DONE")]
+      (display "DELETE ALL DONE")
+      (newline)]
     [else
       (printf "Usage: ~a show-all-logs || delete-all-logs~n" (car args))]))
