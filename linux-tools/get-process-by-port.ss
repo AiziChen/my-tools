@@ -15,5 +15,5 @@
                  port
                  "| awk '{print $7}'")]
            [status (system cmd)])
-      (when (= status 0)
-        (printf "THE PROCESS OF THE PORT `~a` DOESN'T EXIST.~n" port)))]))
+      (unless (= status 0)
+        (printf "error occurred.~n")))]))
