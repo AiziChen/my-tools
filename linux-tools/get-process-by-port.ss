@@ -1,4 +1,5 @@
-#!/usr/bin/env -S scheme --script
+#!/usr/bin/env scheme-script
+(import (chezscheme))
 
 (define display-usage
   (lambda (app-name)
